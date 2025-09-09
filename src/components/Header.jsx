@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useBudget } from "../contexts/BudgetContext";
+
 const Header = () => {
   const { budgetMode, setBudgetMode } = useBudget();
   const toggleBudjet = () => {
@@ -32,7 +33,9 @@ const Header = () => {
           <div className="col-12 text-center">
             <button
               onClick={toggleBudjet}
-              className={`btn btn-sm ms-3 ${budgetMode ? "btn-danger" : "btn-success"}`}
+              className={`btn btn-sm ms-3 ${
+                budgetMode ? "btn-danger" : "btn-success"
+              }`}
             >
               {budgetMode
                 ? "Disattiva Modalità Budget"
