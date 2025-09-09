@@ -32,7 +32,7 @@ const Header = () => {
           <div className="col-12 text-center">
             <button
               onClick={toggleBudjet}
-              className="btn btn-sm btn-outline-success ms-3"
+              className={`btn btn-sm ms-3 ${budgetMode ? "btn-danger" : "btn-success"}`}
             >
               {budgetMode
                 ? "Disattiva Modalità Budget"
