@@ -6,12 +6,11 @@ import Products from "./pages/Products";
 import DetailProduct from "./pages/DetailProduct";
 import { useState, useEffect } from "react";
 import axios from "axios";
-
+import { BudgetProvider } from "./contexts/BudgetContext";
 
 function App() {
-  
   return (
-    <>
+    <BudgetProvider>
       <BrowserRouter>
         <Routes>
           <Route element={<DefaultLayout />}>
@@ -24,7 +23,7 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
-    </>
+    </BudgetProvider>
   );
 }
 
