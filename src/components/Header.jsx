@@ -1,5 +1,14 @@
 import { NavLink } from "react-router-dom";
+import { useBudget } from "../contexts/BudgetContext";
 const Header = () => {
+  const { budgetMode, setBudgetMode } = useBudget();
+  const toggleBudjet = () => {
+    if (budgetMode === true) {
+      setBudgetMode(false);
+    } else {
+      setBudgetMode(true);
+    }
+  };
   return (
     <header>
       <div className="container">
@@ -19,6 +28,16 @@ const Header = () => {
                 </li>
               </ul>
             </div>
+          </div>
+          <div className="col-12 text-center">
+            <button
+              onClick={toggleBudjet}
+              className="btn btn-sm btn-outline-success ms-3"
+            >
+              {budgetMode
+                ? "Disattiva Modalità Budget"
+                : "Attiva Modalità Budget"}
+            </button>
           </div>
         </div>
       </div>

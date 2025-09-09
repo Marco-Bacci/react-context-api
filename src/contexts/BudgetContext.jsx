@@ -4,7 +4,7 @@ import { createContext, useContext, useState } from "react";
 const BudgetContext = createContext();
 
 // creo Provider con stato
-const BudgetProvider = ({ Children }) => {
+const BudgetProvider = ({ children }) => {
   const [budgetMode, setBudgetMode] = useState(false);
 
   // raggruppo stato e funzione in value
