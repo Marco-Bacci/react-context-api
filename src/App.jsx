@@ -4,8 +4,12 @@ import Homepage from "./pages/Homepage";
 import About from "./pages/About";
 import Products from "./pages/Products";
 import DetailProduct from "./pages/DetailProduct";
+import { useState, useEffect } from "react";
+import axios from "axios";
+
 
 function App() {
+  
   return (
     <>
       <BrowserRouter>

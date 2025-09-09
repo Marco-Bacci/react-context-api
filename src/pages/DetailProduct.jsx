@@ -2,6 +2,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+
 const DetailProduct = () => {
   const { id } = useParams();
   const [product, setProduct] = useState({});
@@ -45,10 +46,7 @@ const DetailProduct = () => {
           </button>
           {/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
            */}
-          <Link className="btn btn-info mt-2 me-3" to={`/products`}>
-            {" "}
-            torna a elenco prodotti{" "}
-          </Link>
+          
           <button
             onClick={() => navigate(`/products`)}
             className="btn btn-warning me-3"
